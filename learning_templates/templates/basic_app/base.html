@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light bg-light">
+        <div class="d-flex flex-row align-items-end">
+          <div class="p-2"> <a class="navbar-brand" href="{% url 'index' %}">BRAND</a> </div>
+          <div class="p-2"> <a class="navbar-link" href="{% url 'admin:index' %}">Admin</a> </div>
+          <div class="p-2"> <a class="navbar-link" href="{% url 'basic_app:other' %}">Other</a> </div>
+        </div>
+      </nav>
+
+      {% block body_block %}
+      <!-- Anything outside of this will be inherited if you extend! -->
+      {% endblock %}
+
+    </div>
+  </body>
+</html>
